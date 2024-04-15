@@ -70,10 +70,10 @@ def submit():
         q_root = Tk()
         q_canvas = Canvas(q_root, bg="white", height=500, width=500)
         q_canvas.pack()
-        if dat_q[t].state:
-            q_canvas.create_text(250, 250, text=dat_q[t].normal_q, font=("Arial", 20))
+        if dat_q[t].state == 0:
+            q_canvas.create_text(250, 250, text=dat_q[t].normal_q, font=("Arial", 20), width=500)
         else:
-            q_canvas.create_text(250, 250, text=dat_q[t].binary_q, font=("Arial", 20))
+            q_canvas.create_text(250, 250, text=dat_q[t].binary_q, font=("Arial", 20), width=500)
 
         yes_b = Button(q_root, text="YES", command=lambda: correct(p, t), bg="black", fg="white")
         no_b = Button(q_root, text="NO", command=lambda: incorrect(p, t), bg="black", fg="white")
