@@ -6,13 +6,10 @@ pos_q = [
 
 
 class Hexagon:
-    def __init__(self, name, state, color, num, normal_q, binary_q):
+    def __init__(self, name, question, answer):
         self.name = name
-        self.state = state
-        self.color = color
-        self.num = num
-        self.normal_q = normal_q
-        self.binary_q = binary_q
+        self.question = question
+        self.answer = answer
 
 
-colors = ("gray90", "orange", "cyan", "red")
+colors = ("gray90", "orange", "cyan", "black")
